@@ -1,0 +1,218 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: #f5f7fb;
+  color: #172033;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+main {
+  min-height: 100vh;
+  padding: 40px 20px;
+}
+
+.playground {
+  max-width: 1100px;
+  margin: auto;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 35px;
+}
+
+.header h1 {
+  font-size: 36px;
+  margin-bottom: 10px;
+}
+
+.header p {
+  color: #64748b;
+}
+
+.eyebrow {
+  color: #6366f1;
+  font-weight: bold;
+  margin-bottom: 12px;
+}
+
+.section {
+  background: white;
+  border: 1px solid #e2e8f0;
+  border-radius: 14px;
+  padding: 24px;
+  margin-bottom: 20px;
+}
+
+.section h2 {
+  font-size: 18px;
+  margin-bottom: 16px;
+}
+
+.model-select,
+.custom-model,
+textarea {
+  width: 100%;
+  padding: 13px;
+  border: 1px solid #cbd5e1;
+  border-radius: 9px;
+  font-size: 15px;
+  outline: none;
+}
+
+.model-select:focus,
+.custom-model:focus,
+textarea:focus {
+  border-color: #6366f1;
+}
+
+.custom-model {
+  margin-top: 12px;
+}
+
+textarea {
+  min-height: 150px;
+  resize: vertical;
+  line-height: 1.6;
+}
+
+.stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.stat-card {
+  background: #eef2ff;
+  padding: 18px;
+  border-radius: 12px;
+  text-align: center;
+}
+
+.stat-card h3 {
+  font-size: 28px;
+  color: #4f46e5;
+}
+
+.stat-card p {
+  color: #64748b;
+  margin-top: 5px;
+  font-size: 13px;
+}
+
+.view-controls {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 15px;
+  flex-wrap: wrap;
+}
+
+.view-controls button {
+  border: 1px solid #cbd5e1;
+  background: white;
+  padding: 9px 18px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.view-controls button:hover {
+  background: #eef2ff;
+}
+
+.output-box {
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 10px;
+  padding: 18px;
+  min-height: 100px;
+  overflow-wrap: anywhere;
+}
+
+.tokens {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+}
+
+.token-blue { background: #dbeafe; }
+.token-green { background: #dcfce7; }
+.token-yellow { background: #fef3c7; }
+.token-purple { background: #ede9fe; }
+.token-pink { background: #fce7f3; }
+.token-teal { background: #ccfbf1; }
+
+.tokens span {
+  padding: 6px 9px;
+  border-radius: 6px;
+  font-family: monospace;
+  font-size: 14px;
+}
+
+.status {
+  margin-top: 12px;
+  color: #64748b;
+  font-size: 14px;
+}
+
+.footer {
+  text-align: center;
+  color: #94a3b8;
+  font-size: 13px;
+  margin-top: 25px;
+}
+
+@media (max-width: 600px) {
+  main {
+    padding: 20px 12px;
+  }
+
+  .header h1 {
+    font-size: 27px;
+  }
+
+  .stats {
+    grid-template-columns: 1fr;
+  }
+
+  .section {
+    padding: 16px;
+  }
+}
+
+
+/* Token ID spacing and visualization */
+.ids-output {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 12px;
+  padding: 18px;
+  line-height: 1.8;
+}
+
+.ids-output .token {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 48px;
+  padding: 10px 14px;
+  background: #e8efff;
+  color: #3047a5;
+  border: 1px solid #cbd7ff;
+  border-radius: 9px;
+  font-size: 14px;
+  font-weight: 700;
+  font-family: monospace;
+  white-space: nowrap;
+  transition: transform 0.2s ease;
+}
+
+.ids-output .token:hover {
+  transform: translateY(-3px);
+  background: #d9e4ff;
+}
