@@ -42,6 +42,7 @@ npm run dev
 ```
 
 Open http://localhost:3000 in your browser.
+Live link: https://tokenplayground-five.vercel.app/
 
 ## Build
 
